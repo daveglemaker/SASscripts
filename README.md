@@ -4,7 +4,7 @@
 ## Start/Stop/Status scripts
 - sas.servers.template*.sh   all sas services assumes passwordless ssh is setup
 - objspawn.sh  all object spawners
-- agent.sh  all EV agents
+- grid.sh  all sgmg servers
 - sas.servers_boot.template.txt  add sas.servers to boot script
 
 ## Cleanup script
