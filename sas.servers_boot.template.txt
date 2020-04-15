@@ -1,0 +1,41 @@
+# -- add meta sas.servers to boot, run on metadata server --
+su -
+export configdir=/shared/sas/sasconfig/meta
+
+cd $configdir/Lev1
+cp sas.servers /etc/init.d
+chmod 0755 /etc/init.d/sas.servers
+
+/sbin/chkconfig --add sas.servers
+/sbin/chkconfig --level 35 sas.servers on
+/sbin/chkconfig --list sas.servers
+
+
+
+# -- add compute sas.servers to boot, run on grid master server --
+su -
+export configdir=/shared/sas/sasconfig/compute
+
+cd $configdir/Lev1
+cp sas.servers /etc/init.d
+chmod 0755 /etc/init.d/sas.servers
+
+/sbin/chkconfig --add sas.servers
+/sbin/chkconfig --level 35 sas.servers on
+/sbin/chkconfig --list sas.servers
+
+
+
+# -- add midtier sas.servers to boot, run on midtier server --
+su -
+export configdir=/shared/sas/sasconfig/mid
+
+cd $configdir/Lev1
+cp sas.servers /etc/init.d
+chmod 0755 /etc/init.d/sas.servers
+
+/sbin/chkconfig --add sas.servers
+/sbin/chkconfig --level 35 sas.servers on
+/sbin/chkconfig --list sas.servers
+
+
